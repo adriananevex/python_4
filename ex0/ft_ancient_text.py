@@ -1,0 +1,29 @@
+def recover_fragment(file_path: str) -> str | None:
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            return file.read()
+    except FileNotFoundError:
+        return None
+
+
+def main() -> None:
+    file_path = "ancient_fragment.txt"
+
+    print("=== CYBER ARCHIVES - DATA RECOVERY SYSTEM ===")
+    print(f"Accessing Storage Vault: {file_path}")
+
+    content = recover_fragment(file_path)
+    if content is None:
+        print("Error: Storage vault not found. Run data generator first.")
+        return
+
+    print("Connection estabilished...")
+    print("RECOVERED DATA:")
+    print(content, end="")
+    if content and not content.endswith("\n"):
+        print()
+    print("Data recovery complete. Storage unit disconnected.")
+
+
+if __name__ == "__main__":
+    main()
