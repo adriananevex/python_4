@@ -1,32 +1,32 @@
-def crisis_hadler(filename):
+def crisis_handler(filename: str) -> None:
     if filename == "standard_archive.txt":
-        print("ROUTINE ACCESS: Attemting access to '" + filename + "'")
+        print(f"ROUTINE ACCESS: Attemting access to '{filename}'")
     else:
-        print("CRISIS ALERT: Attempting access to '" + filename + "'")
+        print(f"CRISIS ALERT: Attempting access to '{filename}'")
 
     try:
-        with open(filename, "r") as f:
+        with open(filename, "r", encoding="utf-8") as f:
             data = f.read()
 
-        print("SUCCESS: Archive recovered - " + repr(data))
+        print(f"SUCCESS: Archive recovered - {data!r}")
         print("STATUS: Normal operations resumed")
 
-    except FileNotError:
+    except FileNotFoundError:
         print("RESPONSE: Archive not found in storage matrix")
         print("STATUS: Crisis handled, system stable")
 
     except PermissionError:
         print("RESPONSE: Security protocols deny access")
-        print(#STATUS: Crisis handled, security maintained")
+        print("STATUS: Crisis handled, security maintained")
 
     except Exception:
         print("RESPONSE: Unexpected system anomaly encountered")
         print("STATUS: Crisis contained, diagnostic required")
 
 
-def main()
+def main() -> None:
     print("=== CYBER ARCHIVES - CRISIS RESPONSE SYSTEM ===")
-    crisis_handler("loat_archive.txt")
+    crisis_handler("lost_archive.txt")
     crisis_handler("classified_vault.txt")
     crisis_handler("standard_archive.txt")
 

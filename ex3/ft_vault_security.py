@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     print(" === CYBER ARCHIVES - VAULT SECURITY SYSTEM ===")
     print("Initiating secure vault access...")
     print("Vault connection stablished with failsafe protocols")
@@ -17,13 +17,12 @@ def main():
     print("SECURE PRESERVATION:")
 
     with open("security_update.txt", "w") as f:
-        f.wrife("[CLASSIFIED] New security protocols archived\n")
+        f.write("[CLASSIFIED] New security protocols archived\n")
 
     print("[CLASSIFIED] New security protocols archieved")
     print("Vault automatically sealed upon completion")
     print("All vault operations completed with maximum security.")
 
 
-if __name == "__main__":
+if __name__ == "__main__":
     main()
-  
