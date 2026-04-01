@@ -1,6 +1,6 @@
 def crisis_handler(filename: str) -> None:
     if filename == "standard_archive.txt":
-        print(f"ROUTINE ACCESS: Attemting access to '{filename}'")
+        print(f"ROUTINE ACCESS: Attempting access to '{filename}'")
     else:
         print(f"CRISIS ALERT: Attempting access to '{filename}'")
 

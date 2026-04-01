@@ -14,10 +14,10 @@ def main() -> None:
 
     content = recover_fragment(file_path)
     if content is None:
-        print("Error: Storage vault not found. Run data generator first.")
+        print("ERROR: Storage vault not found. Run data generator first.")
         return
 
-    print("Connection estabilished...")
+    print("Connection established...")
     print("RECOVERED DATA:")
     print(content, end="")
     if content and not content.endswith("\n"):

@@ -2,7 +2,7 @@ import sys
 
 
 def main() -> None:
-    print("=== CYBER ARCHIVES - COMMUNICATION SUSTEM ===")
+    print("=== CYBER ARCHIVES - COMMUNICATION SYSTEM ===")
 
     archivist_id = input("Input Stream active. Enter archivist ID: ")
     status = input("Input Stream active. Enter status report: ")
