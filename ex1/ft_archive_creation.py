@@ -2,10 +2,12 @@ def main() -> None:
     filename = "new_discovery.txt"
 
     print("=== CYBER ARCHIVES - PRESERVATION SYSTEM ===")
+    print()
     print("Initializing new storage unit:", filename)
 
     with open(filename, "w", encoding="utf-8") as file:
         print("Storage unit created successfully...")
+        print()
         print("Inscribing preservation data...")
 
         file.write("[ENTRY 001] New quantum algorithm discovered\n")
@@ -17,6 +19,7 @@ def main() -> None:
         file.write("[ENTRY 003] Archived by Data Archivist trainee\n")
         print("[ENTRY 003] Archived by Data Archivist trainee")
 
+    print()
     print("Data inscription complete. Storage unit sealed.")
     print(f"Archive '{filename}' ready for long-term preservation.")
 

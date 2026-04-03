@@ -10,6 +10,7 @@ def main() -> None:
     file_path = "ancient_fragment.txt"
 
     print("=== CYBER ARCHIVES - DATA RECOVERY SYSTEM ===")
+    print()
     print(f"Accessing Storage Vault: {file_path}")
 
     content = recover_fragment(file_path)
@@ -18,10 +19,10 @@ def main() -> None:
         return
 
     print("Connection established...")
+    print()
     print("RECOVERED DATA:")
-    print(content, end="")
-    if content and not content.endswith("\n"):
-        print()
+    print(content)
+    print()
     print("Data recovery complete. Storage unit disconnected.")
 
 

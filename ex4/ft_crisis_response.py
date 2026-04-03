@@ -5,10 +5,10 @@ def crisis_handler(filename: str) -> None:
         print(f"CRISIS ALERT: Attempting access to '{filename}'")
 
     try:
-        with open(filename, "r", encoding="utf-8") as f:
-            data = f.read()
+        with open(filename, "r", encoding="utf-8") as file:
+            data = file.read()
 
-        print(f"SUCCESS: Archive recovered - {data!r}")
+        print(f"SUCCESS: Archive recovered - {data}")
         print("STATUS: Normal operations resumed")
 
     except FileNotFoundError:
@@ -26,10 +26,13 @@ def crisis_handler(filename: str) -> None:
 
 def main() -> None:
     print("=== CYBER ARCHIVES - CRISIS RESPONSE SYSTEM ===")
+    print()
     crisis_handler("lost_archive.txt")
+    print()
     crisis_handler("classified_vault.txt")
+    print()
     crisis_handler("standard_archive.txt")
-
+    print()
     print("All crisis scenarios handled successfully. Archives secure.")
 
 
